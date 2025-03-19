@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Lukas Rolland - Développeur Web">
+    <title>Portfolio - Lukas Rolland</title>   
+    <!-- Lien Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lien Font Awesome via CDN -->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!-- Lien CSS -->
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+     <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                <img src="assets/img/lukas-rolland-black.png" alt="Logo Lukas Rolland" class="h-12 object-contain mr-4 hover:opacity-80">
+            </a>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-700 hover:text-blue-600">Accueil</a>
+
+                <!-- Menu déroulant Présentation -->
+                <div class="relative group">
+                    <button class="text-gray-700 hover:text-blue-600 focus:outline-none">Présentation</button>
+                    <div class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">À propos</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mes formations</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mes expériences</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mes certifications</a>
+                    </div>
+                </div>
+
+                <!-- Menu déroulant Projets -->
+                <div class="relative group">
+                    <button class="text-gray-700 hover:text-blue-600 focus:outline-none">Projets</button>
+                    <div class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Fait en cours</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Fait en alternance</a>
+                    </div>
+                </div>
+
+                <a href="#" class="text-gray-700 hover:text-blue-600">Actualité</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Me Contacter</a>
+            </nav>
+
+            <!-- Menu mobile (caché par défaut) -->
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                ☰
+            </button>
+
+            <div class="absolute top-16 left-0 w-full bg-white shadow-md hidden flex-col space-y-4 p-4 md:hidden" id="mobile-menu">
+                <a href="#" class="text-gray-700 hover:text-blue-600">Accueil</a><br>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Présentation</a><br>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Projets</a><br>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Actualité</a><br>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Me Contacter</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Accueil -->
+    <section id="accueil" class="h-screen flex items-center justify-center bg-cover bg-center">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Bienvenue sur mon Portfolio</h1>
+            <p class="text-lg mb-6">Développeur Web - HTML, CSS, JavaScript, PHP</p>
+            <a href="#a-propos" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                En savoir plus
+            </a>
+        </div>
+    </section>
+
+    <!-- À Propos -->
+    <section id="a-propos" class="h-screen flex items-center justify-center bg-gray-200">
+        <h2 class="text-4xl font-bold">À Propos de moi</h2>
+    </section>
+
+    <!-- Mes Formations -->
+    <section id="formations" class="h-screen flex items-center justify-center bg-gray-300">
+        <h2 class="text-4xl font-bold">Mes Formations</h2>
+    </section>
+
+    <!-- Mes Expériences -->
+    <section id="experiences" class="h-screen flex items-center justify-center bg-gray-400">
+        <h2 class="text-4xl font-bold">Mes Expériences</h2>
+    </section>
+
+    <!-- Mes Certifications -->
+    <section id="certifications" class="h-screen flex items-center justify-center bg-gray-500">
+        <h2 class="text-4xl font-bold">Mes Certifications</h2>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="h-screen flex items-center justify-center bg-gray-600">
+        <h2 class="text-4xl font-bold text-white">Mes Projets</h2>
+    </section>
+
+    <!-- Actualité -->
+    <section id="actualite" class="h-screen flex items-center justify-center bg-gray-700">
+        <h2 class="text-4xl font-bold text-white">Actualité</h2>
+    </section>
+
+    <!-- Me Contacter -->
+    <section id="contact" class="h-screen flex items-center justify-center bg-gray-800">
+        <h2 class="text-4xl font-bold text-white">Me Contacter</h2>
+    </section>
+    <script src="/assets/scripts/script.js"></script>
+</body>
+</html>
