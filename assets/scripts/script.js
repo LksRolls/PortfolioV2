@@ -3,12 +3,31 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
     document.getElementById('mobile-menu').classList.toggle('hidden');
 });
 
-// Menu déroulant mobile Présentation
-document.getElementById('mobile-presentation').addEventListener('click', function () {
-    document.getElementById('mobile-presentation-menu').classList.toggle('hidden');
-});
+document.addEventListener("DOMContentLoaded", function () {
+    function setupDropdown(buttonId, menuId) {
+        const button = document.getElementById(buttonId);
+        const menu = document.getElementById(menuId);
 
-// Menu déroulant mobile Projets
-document.getElementById('mobile-projets').addEventListener('click', function () {
-    document.getElementById('mobile-projets-menu').classList.toggle('hidden');
+        button.addEventListener("mouseenter", () => {
+            menu.classList.remove("opacity-0", "invisible");
+            menu.classList.add("opacity-100", "visible");
+        });
+
+        button.addEventListener("mouseleave", () => {
+            setTimeout(() => {
+                if (!menu.matches(":hover")) {
+                    menu.classList.add("opacity-0", "invisible");
+                    menu.classList.remove("opacity-100", "visible");
+                }
+            }, 200);
+        });
+
+        menu.addEventListener("mouseleave", () => {
+            menu.classList.add("opacity-0", "invisible");
+            menu.classList.remove("opacity-100", "visible");
+        });
+    }
+
+    setupDropdown("btn-presentation", "menu-presentation");
+    setupDropdown("btn-projets", "menu-projets");
 });
